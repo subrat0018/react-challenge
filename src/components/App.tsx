@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import Header from './Header'
+import Search from './Search'
 
 const App: FC = () => {
   return (
     <Container>
       <Header />
-      {/* Happy coding! */}
+      <Search />
     </Container>
   )
 }
@@ -14,7 +15,7 @@ const App: FC = () => {
 const Container = styled.div({
   margin: '0 auto',
   height: '100%',
-  width: '560px',
+  width: '50%',
   paddingTop: '60px',
 })
 
