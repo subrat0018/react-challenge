@@ -8,14 +8,16 @@ interface Props {
   onFavourite?: (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void
 }
 
-const Heart: FC<Props> = ({ onFavourite, icon, alt }) => {
-  return <HeartIcon src={icons[icon]} alt={alt} />
+const Favourite: FC<Props> = ({ onFavourite, icon, alt }) => {
+  return <FavouriteIcon onClick={onFavourite} src={icons[icon]} alt={alt} />
 }
 
-const HeartIcon = styled.img({
+const FavouriteIcon = styled.img({
+  position: 'absolute',
+  bottom: '10px',
+  right: '10px',
   width: '17px',
   height: '15px',
-  alignSelf: 'center',
 })
 
-export default Heart
+export default Favourite
